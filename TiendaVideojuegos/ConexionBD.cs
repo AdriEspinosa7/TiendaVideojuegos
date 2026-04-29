@@ -6,7 +6,7 @@ namespace TiendaVideojuegos
 {
     public class ConexionBD
     {
-        // Preparo la cadena de conexión con los datos por defecto de mi XAMPP local
+        // Preparo la cadena de conexión con los datos por defecto de mi XAMPP
         // el usuario es root y no tiene contraseña por defecto
         private string cadenaConexion = "Server=localhost; Database=tienda_videojuegos; Uid=root; Pwd=;";
 
