@@ -56,5 +56,13 @@ namespace TiendaVideojuegos
             // Lo muestro en pantalla
             formCli.Show();
         }
+
+        private void nuevaVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Instancio el formulario de ventas y lo meto en el contenedor principal
+            FormVentas formVenta = new FormVentas();
+            formVenta.MdiParent = this;
+            formVenta.Show();
+        }
     }
 }
