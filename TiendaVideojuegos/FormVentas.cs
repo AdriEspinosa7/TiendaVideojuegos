@@ -19,7 +19,7 @@ namespace TiendaVideojuegos
 
         private void FormVentas_Load(object sender, EventArgs e)
         {
-            // Nada más abrir la pantalla de ventas llamo a mis funciones para cargar los datos en los desplegables
+            // Nada más abrir la pantalla de ventas llamo a las funciones para cargar los datos en los desplegables
             CargarClientesEnCombo();
             CargarProductosEnCombo();
         }
@@ -33,7 +33,7 @@ namespace TiendaVideojuegos
             {
                 miConexion.Abrir();
 
-                // 1. Busco el ID y el nombre de todos los clientes
+                // Busco el ID y el nombre de todos los clientes
                 string consulta = "SELECT id_cliente, nombre_completo FROM Clientes";
                 MySql.Data.MySqlClient.MySqlCommand comando = new MySql.Data.MySqlClient.MySqlCommand(consulta, conexionActiva);
 
@@ -41,10 +41,10 @@ namespace TiendaVideojuegos
                 DataTable tablaVirtual = new DataTable();
                 adaptador.Fill(tablaVirtual);
 
-                // 2. Enlazo la tabla virtual con mi ComboBox de clientes
+                // Enlazo la tabla con el ComboBox de clientes
                 cmbClientes.DataSource = tablaVirtual;
 
-                // 3. Le digo qué columna quiero que se lea en pantalla (el nombre) y qué columna me guardo yo de forma oculta (el ID)
+                // Le digo qué columna quiero que se lea en pantalla, el nombre, y qué columna me guardo yo de forma oculta (el ID)
                 cmbClientes.DisplayMember = "nombre_completo";
                 cmbClientes.ValueMember = "id_cliente";
 
@@ -117,6 +117,7 @@ namespace TiendaVideojuegos
                     return;
                 }
             }
+
             catch
             {
                 MessageBox.Show("Escribe una cantidad numérica válida", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -145,11 +146,13 @@ namespace TiendaVideojuegos
                 // ExecuteScalar porque sé que la consulta me devuelve un único dato (el precio)
                 precioUnitario = Convert.ToDecimal(comando.ExecuteScalar());
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show("Error al obtener el precio de la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Salgo para no añadir un producto sin precio
             }
+
             finally
             {
                 miConexion.Cerrar();
@@ -285,10 +288,12 @@ namespace TiendaVideojuegos
                 // Vuelvo a llamar a mi función de cargar productos para que el desplegable se actualice y que si hay algún juego que se haya quedado sin stock ya no aparezca
                 CargarProductosEnCombo();
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show("Error crítico al procesar la venta: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
             finally
             {
                 miConexion.Cerrar();

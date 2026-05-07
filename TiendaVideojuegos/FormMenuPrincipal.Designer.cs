@@ -109,6 +109,7 @@
             this.gestiónDeProveedoresToolStripMenuItem.Name = "gestiónDeProveedoresToolStripMenuItem";
             this.gestiónDeProveedoresToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.gestiónDeProveedoresToolStripMenuItem.Text = "Gestión de Proveedores";
+            this.gestiónDeProveedoresToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeProveedoresToolStripMenuItem_Click);
             // 
             // operacionesToolStripMenuItem
             // 
@@ -131,6 +132,7 @@
             this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
             this.reservasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reservasToolStripMenuItem.Text = "Reservas";
+            this.reservasToolStripMenuItem.Click += new System.EventHandler(this.reservasToolStripMenuItem_Click);
             // 
             // informesToolStripMenuItem
             // 

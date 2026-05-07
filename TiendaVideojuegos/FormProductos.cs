@@ -20,14 +20,14 @@ namespace TiendaVideojuegos
 
         private void FormProductos_Load(object sender, EventArgs e)
         {
-            // Nada más cargar la pantalla, llamo a mi función para rellenar la tabla
+            // Nada más cargar la pantalla, llamo a la función para rellenar la tabla
             CargarProductos();
         }
 
         // Creo un método propio para poder llamarlo cada vez que necesite actualizar la lista
         private void CargarProductos()
         {
-            // Preparo mi conexión
+            // Preparo la conexión
             ConexionBD miConexion = new ConexionBD();
             MySqlConnection conexionActiva = miConexion.ObtenerConexion();
 
@@ -58,6 +58,7 @@ namespace TiendaVideojuegos
             {
                 MessageBox.Show("Error al cargar los productos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
             finally
             {
                 miConexion.Cerrar();
@@ -146,6 +147,7 @@ namespace TiendaVideojuegos
                 {
                     MessageBox.Show("Error al guardar el producto en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
                 finally
                 {
                     // me aseguro de cerrar la conexión
@@ -207,6 +209,7 @@ namespace TiendaVideojuegos
                 {
                     MessageBox.Show("Error al eliminar el producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
                 finally
                 {
                     miConexion.Cerrar();

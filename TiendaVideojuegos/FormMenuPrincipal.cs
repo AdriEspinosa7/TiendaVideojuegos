@@ -64,5 +64,19 @@ namespace TiendaVideojuegos
             formVenta.MdiParent = this;
             formVenta.Show();
         }
+
+        private void reservasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormReservas formRes = new FormReservas();
+            formRes.MdiParent = this;
+            formRes.Show();
+        }
+
+        private void gestiónDeProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormProveedores formProv = new FormProveedores();
+            formProv.MdiParent = this;
+            formProv.Show();
+        }
     }
 }
