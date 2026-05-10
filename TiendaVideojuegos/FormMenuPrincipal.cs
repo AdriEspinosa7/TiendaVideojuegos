@@ -12,9 +12,15 @@ namespace TiendaVideojuegos
 {
     public partial class FormMenuPrincipal : Form
     {
-        public FormMenuPrincipal()
+        // Me creo una variable global en este formulario para acordarme de quién ha entrado
+        string rolDelUsuarioLogueado = "";
+
+
+        // Modifico el constructor para que pida el rol
+        public FormMenuPrincipal(string rolQueVieneDelLogin)
         {
             InitializeComponent();
+            rolDelUsuarioLogueado = rolQueVieneDelLogin;
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,6 +83,25 @@ namespace TiendaVideojuegos
             FormProveedores formProv = new FormProveedores();
             formProv.MdiParent = this;
             formProv.Show();
+        }
+
+        private void verInformesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormInformes formInf = new FormInformes();
+            formInf.MdiParent = this;
+            formInf.Show();
+        }
+
+        private void FormMenuPrincipal_Load(object sender, EventArgs e)
+        {
+            // Cuando arranca el menú compruebo el rol
+            if (rolDelUsuarioLogueado == "Empleado")
+            {
+
+                // Si es un empleado oculto la opción de los informes
+                informesToolStripMenuItem.Visible = false;
+
+            }
         }
     }
 }

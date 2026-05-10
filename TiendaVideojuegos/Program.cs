@@ -16,6 +16,11 @@ namespace TiendaVideojuegos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            // Añado esta línea que me pedía el paquete de NuGet del ReportViewer
+            // Sirve para cargar unas librerías nativas necesarias para que los informes funcionen bien
+            SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
+
             Application.Run(new FormLogin());
         }
     }

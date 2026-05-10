@@ -40,7 +40,7 @@
             this.nuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.catálogoYStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verInformesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,30 +123,31 @@
             // nuevaVentaToolStripMenuItem
             // 
             this.nuevaVentaToolStripMenuItem.Name = "nuevaVentaToolStripMenuItem";
-            this.nuevaVentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevaVentaToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.nuevaVentaToolStripMenuItem.Text = "Nueva Venta";
             this.nuevaVentaToolStripMenuItem.Click += new System.EventHandler(this.nuevaVentaToolStripMenuItem_Click);
             // 
             // reservasToolStripMenuItem
             // 
             this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
-            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.reservasToolStripMenuItem.Text = "Reservas";
             this.reservasToolStripMenuItem.Click += new System.EventHandler(this.reservasToolStripMenuItem_Click);
             // 
             // informesToolStripMenuItem
             // 
             this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.catálogoYStockToolStripMenuItem});
+            this.verInformesToolStripMenuItem});
             this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
             this.informesToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.informesToolStripMenuItem.Text = "Informes";
             // 
-            // catálogoYStockToolStripMenuItem
+            // verInformesToolStripMenuItem
             // 
-            this.catálogoYStockToolStripMenuItem.Name = "catálogoYStockToolStripMenuItem";
-            this.catálogoYStockToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.catálogoYStockToolStripMenuItem.Text = "Catálogo y Stock";
+            this.verInformesToolStripMenuItem.Name = "verInformesToolStripMenuItem";
+            this.verInformesToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.verInformesToolStripMenuItem.Text = "Ver informes";
+            this.verInformesToolStripMenuItem.Click += new System.EventHandler(this.verInformesToolStripMenuItem_Click);
             // 
             // FormMenuPrincipal
             // 
@@ -159,6 +160,7 @@
             this.Name = "FormMenuPrincipal";
             this.Text = "Sistema de gestión - Tienda de videojuegos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormMenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -180,6 +182,6 @@
         private System.Windows.Forms.ToolStripMenuItem gestiónDeProveedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevaVentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reservasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem catálogoYStockToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verInformesToolStripMenuItem;
     }
 }

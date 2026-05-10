@@ -55,8 +55,8 @@ namespace TiendaVideojuegos
                     string rolUsuario = resultado.ToString();
                     MessageBox.Show("¡Bienvenido al sistema! Tu rol es: " + rolUsuario, "Login Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Abro el menú principal
-                    FormMenuPrincipal menu = new FormMenuPrincipal();
+                    // Abro el menú principal y LE PASO EL ROL
+                    FormMenuPrincipal menu = new FormMenuPrincipal(rolUsuario);
                     menu.Show();
 
                     // Oculto la ventana del login
@@ -77,6 +77,11 @@ namespace TiendaVideojuegos
                 // me aseguro de cerrar la conexión siempre
                 miConexion.Cerrar();
             }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
