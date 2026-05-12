@@ -41,6 +41,8 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +64,7 @@
             // laDni
             // 
             this.laDni.AutoSize = true;
-            this.laDni.Location = new System.Drawing.Point(55, 55);
+            this.laDni.Location = new System.Drawing.Point(55, 89);
             this.laDni.Name = "laDni";
             this.laDni.Size = new System.Drawing.Size(52, 13);
             this.laDni.TabIndex = 1;
@@ -71,7 +73,7 @@
             // laNombre
             // 
             this.laNombre.AutoSize = true;
-            this.laNombre.Location = new System.Drawing.Point(55, 130);
+            this.laNombre.Location = new System.Drawing.Point(46, 152);
             this.laNombre.Name = "laNombre";
             this.laNombre.Size = new System.Drawing.Size(94, 13);
             this.laNombre.TabIndex = 2;
@@ -98,7 +100,7 @@
             // txtDni
             // 
             this.txtDni.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtDni.Location = new System.Drawing.Point(197, 55);
+            this.txtDni.Location = new System.Drawing.Point(206, 86);
             this.txtDni.MaxLength = 9;
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(108, 20);
@@ -106,7 +108,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(197, 130);
+            this.txtNombre.Location = new System.Drawing.Point(197, 152);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(178, 20);
             this.txtNombre.TabIndex = 6;
@@ -168,11 +170,30 @@
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(55, 34);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 13);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Buscar por nombre:";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(210, 31);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscar.TabIndex = 18;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
@@ -186,6 +207,8 @@
             this.Controls.Add(this.laNombre);
             this.Controls.Add(this.laDni);
             this.Controls.Add(this.dgvClientes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormClientes";
             this.Text = "Gestión de Clientes";
             this.Load += new System.EventHandler(this.FormClientes_Load);
@@ -210,5 +233,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtBuscar;
     }
 }

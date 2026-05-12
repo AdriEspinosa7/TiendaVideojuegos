@@ -352,6 +352,12 @@ namespace TiendaVideojuegos
                 miConexion.Cerrar();
             }
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            // Filtro la tabla que ya tengo cargada en el dgv sin volver a la base de datos
+            (dgvProductos.DataSource as DataTable).DefaultView.RowFilter = "nombre LIKE '%" + txtBuscar.Text + "%'";
+        }
     }
     }
 

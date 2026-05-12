@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.reportViewerVentas = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotalInformeVentas = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnRefrescarStock = new System.Windows.Forms.Button();
             this.dgvInformeStock = new System.Windows.Forms.DataGridView();
-            this.reportViewerVentas = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -73,6 +73,15 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Informe de Ventas";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // reportViewerVentas
+            // 
+            this.reportViewerVentas.LocalReport.ReportEmbeddedResource = "TiendaVideojuegos.InformeVentas.rdlc";
+            this.reportViewerVentas.Location = new System.Drawing.Point(24, 59);
+            this.reportViewerVentas.Name = "reportViewerVentas";
+            this.reportViewerVentas.ServerReport.BearerToken = null;
+            this.reportViewerVentas.Size = new System.Drawing.Size(674, 303);
+            this.reportViewerVentas.TabIndex = 6;
             // 
             // label2
             // 
@@ -160,21 +169,13 @@
             this.dgvInformeStock.Size = new System.Drawing.Size(691, 344);
             this.dgvInformeStock.TabIndex = 0;
             // 
-            // reportViewerVentas
-            // 
-            this.reportViewerVentas.LocalReport.ReportEmbeddedResource = "TiendaVideojuegos.InformeVentas.rdlc";
-            this.reportViewerVentas.Location = new System.Drawing.Point(24, 59);
-            this.reportViewerVentas.Name = "reportViewerVentas";
-            this.reportViewerVentas.ServerReport.BearerToken = null;
-            this.reportViewerVentas.Size = new System.Drawing.Size(674, 303);
-            this.reportViewerVentas.TabIndex = 6;
-            // 
             // FormInformes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 491);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormInformes";
             this.Text = "Informes y Estadísticas";
             this.Load += new System.EventHandler(this.FormInformes_Load);

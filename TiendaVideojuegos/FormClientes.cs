@@ -283,5 +283,11 @@ namespace TiendaVideojuegos
                 e.Handled = true;
             }
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            // Busca cualquier nombre del dgv que CONTENGA lo que escribas
+            (dgvClientes.DataSource as DataTable).DefaultView.RowFilter = "nombre_completo LIKE '%" + txtBuscar.Text + "%'";
+        }
     }
 }

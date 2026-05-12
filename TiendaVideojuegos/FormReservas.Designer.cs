@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmbClientes = new System.Windows.Forms.ComboBox();
-            this.cmbProductos = new System.Windows.Forms.ComboBox();
-            this.txtAdelanto = new System.Windows.Forms.TextBox();
-            this.btnCrearReserva = new System.Windows.Forms.Button();
-            this.dtpFechaLimite = new System.Windows.Forms.DateTimePicker();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvReservas = new System.Windows.Forms.DataGridView();
-            this.btnCompletar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.dtpFechaLimite = new System.Windows.Forms.DateTimePicker();
+            this.btnCrearReserva = new System.Windows.Forms.Button();
+            this.txtAdelanto = new System.Windows.Forms.TextBox();
+            this.cmbProductos = new System.Windows.Forms.ComboBox();
+            this.cmbClientes = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnCompletar = new System.Windows.Forms.Button();
+            this.dgvReservas = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
@@ -67,65 +67,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nueva Reserva";
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cliente:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(141, 188);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(13, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "€";
             // 
-            // label2
+            // dtpFechaLimite
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Producto a reservar:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 169);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Dinero dejado como señal:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 231);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Fecha límite:";
-            // 
-            // cmbClientes
-            // 
-            this.cmbClientes.FormattingEnabled = true;
-            this.cmbClientes.Location = new System.Drawing.Point(36, 57);
-            this.cmbClientes.Name = "cmbClientes";
-            this.cmbClientes.Size = new System.Drawing.Size(199, 21);
-            this.cmbClientes.TabIndex = 4;
-            // 
-            // cmbProductos
-            // 
-            this.cmbProductos.FormattingEnabled = true;
-            this.cmbProductos.Location = new System.Drawing.Point(36, 116);
-            this.cmbProductos.Name = "cmbProductos";
-            this.cmbProductos.Size = new System.Drawing.Size(199, 21);
-            this.cmbProductos.TabIndex = 5;
-            // 
-            // txtAdelanto
-            // 
-            this.txtAdelanto.Location = new System.Drawing.Point(35, 185);
-            this.txtAdelanto.Name = "txtAdelanto";
-            this.txtAdelanto.Size = new System.Drawing.Size(100, 20);
-            this.txtAdelanto.TabIndex = 6;
-            this.txtAdelanto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAdelanto_KeyPress);
+            this.dtpFechaLimite.Location = new System.Drawing.Point(35, 247);
+            this.dtpFechaLimite.Name = "dtpFechaLimite";
+            this.dtpFechaLimite.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaLimite.TabIndex = 8;
             // 
             // btnCrearReserva
             // 
@@ -137,12 +93,65 @@
             this.btnCrearReserva.UseVisualStyleBackColor = true;
             this.btnCrearReserva.Click += new System.EventHandler(this.btnCrearReserva_Click);
             // 
-            // dtpFechaLimite
+            // txtAdelanto
             // 
-            this.dtpFechaLimite.Location = new System.Drawing.Point(35, 247);
-            this.dtpFechaLimite.Name = "dtpFechaLimite";
-            this.dtpFechaLimite.Size = new System.Drawing.Size(200, 20);
-            this.dtpFechaLimite.TabIndex = 8;
+            this.txtAdelanto.Location = new System.Drawing.Point(35, 185);
+            this.txtAdelanto.Name = "txtAdelanto";
+            this.txtAdelanto.Size = new System.Drawing.Size(100, 20);
+            this.txtAdelanto.TabIndex = 6;
+            this.txtAdelanto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAdelanto_KeyPress);
+            // 
+            // cmbProductos
+            // 
+            this.cmbProductos.FormattingEnabled = true;
+            this.cmbProductos.Location = new System.Drawing.Point(36, 116);
+            this.cmbProductos.Name = "cmbProductos";
+            this.cmbProductos.Size = new System.Drawing.Size(199, 21);
+            this.cmbProductos.TabIndex = 5;
+            // 
+            // cmbClientes
+            // 
+            this.cmbClientes.FormattingEnabled = true;
+            this.cmbClientes.Location = new System.Drawing.Point(36, 57);
+            this.cmbClientes.Name = "cmbClientes";
+            this.cmbClientes.Size = new System.Drawing.Size(199, 21);
+            this.cmbClientes.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(33, 231);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Fecha límite:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(32, 169);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Dinero dejado como señal:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(33, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Producto a reservar:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(33, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cliente:";
             // 
             // groupBox2
             // 
@@ -156,6 +165,26 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Reservas Activas";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(270, 216);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(127, 23);
+            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Text = "Cancelar Reserva";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnCompletar
+            // 
+            this.btnCompletar.Location = new System.Drawing.Point(78, 216);
+            this.btnCompletar.Name = "btnCompletar";
+            this.btnCompletar.Size = new System.Drawing.Size(127, 23);
+            this.btnCompletar.TabIndex = 1;
+            this.btnCompletar.Text = "Completar y Entregar";
+            this.btnCompletar.UseVisualStyleBackColor = true;
+            this.btnCompletar.Click += new System.EventHandler(this.btnCompletar_Click);
+            // 
             // dgvReservas
             // 
             this.dgvReservas.AllowUserToAddRows = false;
@@ -168,35 +197,6 @@
             this.dgvReservas.Size = new System.Drawing.Size(462, 191);
             this.dgvReservas.TabIndex = 0;
             // 
-            // btnCompletar
-            // 
-            this.btnCompletar.Location = new System.Drawing.Point(78, 216);
-            this.btnCompletar.Name = "btnCompletar";
-            this.btnCompletar.Size = new System.Drawing.Size(127, 23);
-            this.btnCompletar.TabIndex = 1;
-            this.btnCompletar.Text = "Completar y Entregar";
-            this.btnCompletar.UseVisualStyleBackColor = true;
-            this.btnCompletar.Click += new System.EventHandler(this.btnCompletar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(270, 216);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(127, 23);
-            this.btnCancelar.TabIndex = 2;
-            this.btnCancelar.Text = "Cancelar Reserva";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(141, 188);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "€";
-            // 
             // FormReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,6 +204,8 @@
             this.ClientSize = new System.Drawing.Size(886, 468);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormReservas";
             this.Text = "Gestión de Reservas";
             this.Load += new System.EventHandler(this.FormReservas_Load);
