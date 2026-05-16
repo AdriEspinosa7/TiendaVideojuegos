@@ -111,6 +111,7 @@
             this.txtContacto.Name = "txtContacto";
             this.txtContacto.Size = new System.Drawing.Size(229, 20);
             this.txtContacto.TabIndex = 5;
+            this.txtContacto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContacto_KeyPress);
             // 
             // txtTelefono
             // 
@@ -160,7 +161,7 @@
             this.groupBox2.Controls.Add(this.dgvProveedores);
             this.groupBox2.Location = new System.Drawing.Point(363, 36);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(375, 345);
+            this.groupBox2.Size = new System.Drawing.Size(388, 345);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lista de Proveedores";
@@ -174,7 +175,7 @@
             this.dgvProveedores.ReadOnly = true;
             this.dgvProveedores.RowHeadersVisible = false;
             this.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProveedores.Size = new System.Drawing.Size(362, 320);
+            this.dgvProveedores.Size = new System.Drawing.Size(375, 320);
             this.dgvProveedores.TabIndex = 0;
             this.dgvProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellClick);
             // 
@@ -182,12 +183,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(800, 440);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormProveedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Proveedores";
             this.Load += new System.EventHandler(this.FormProveedores_Load);
             this.groupBox1.ResumeLayout(false);

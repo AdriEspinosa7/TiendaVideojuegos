@@ -112,6 +112,7 @@
             this.txtCantidad.Size = new System.Drawing.Size(230, 20);
             this.txtCantidad.TabIndex = 6;
             this.txtCantidad.Text = "1";
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // dgvCarrito
             // 
@@ -160,7 +161,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblTotal.Location = new System.Drawing.Point(692, 407);
+            this.lblTotal.Location = new System.Drawing.Point(689, 393);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(178, 31);
             this.lblTotal.TabIndex = 8;
@@ -169,7 +170,7 @@
             // btnFinalizarVenta
             // 
             this.btnFinalizarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizarVenta.Location = new System.Drawing.Point(698, 450);
+            this.btnFinalizarVenta.Location = new System.Drawing.Point(695, 436);
             this.btnFinalizarVenta.Name = "btnFinalizarVenta";
             this.btnFinalizarVenta.Size = new System.Drawing.Size(172, 30);
             this.btnFinalizarVenta.TabIndex = 9;
@@ -218,7 +219,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(942, 505);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(942, 493);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnFinalizarVenta);

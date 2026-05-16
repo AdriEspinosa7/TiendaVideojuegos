@@ -299,5 +299,14 @@ namespace TiendaVideojuegos
                 miConexion.Cerrar();
             }
         }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Si la tecla pulsada no es un número y tampoco es la tecla de borrar
+            if (char.IsDigit(e.KeyChar) == false && char.IsControl(e.KeyChar) == false)
+            {
+                e.Handled = true; // ignoro la pulsación
+            }
+        }
     }
 }

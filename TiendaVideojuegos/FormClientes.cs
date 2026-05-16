@@ -85,6 +85,12 @@ namespace TiendaVideojuegos
                 return; // Salgo para que no se guarde el email mal
             }
 
+            if (txtDni.Text.Length != 9)
+            {
+                MessageBox.Show("El DNI debe tener exactamente 9 caracteres (8 números y 1 letra)", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             ConexionBD miConexion = new ConexionBD();
             MySqlConnection conexionActiva = miConexion.ObtenerConexion();
 

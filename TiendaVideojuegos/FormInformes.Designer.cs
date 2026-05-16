@@ -53,7 +53,7 @@
             this.tabControl1.Location = new System.Drawing.Point(22, 24);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(735, 440);
+            this.tabControl1.Size = new System.Drawing.Size(826, 483);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -69,7 +69,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(727, 414);
+            this.tabPage1.Size = new System.Drawing.Size(818, 457);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Informe de Ventas";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -80,7 +80,7 @@
             this.reportViewerVentas.Location = new System.Drawing.Point(24, 59);
             this.reportViewerVentas.Name = "reportViewerVentas";
             this.reportViewerVentas.ServerReport.BearerToken = null;
-            this.reportViewerVentas.Size = new System.Drawing.Size(674, 303);
+            this.reportViewerVentas.Size = new System.Drawing.Size(754, 350);
             this.reportViewerVentas.TabIndex = 6;
             // 
             // label2
@@ -107,7 +107,7 @@
             // 
             this.lblTotalInformeVentas.AutoSize = true;
             this.lblTotalInformeVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalInformeVentas.Location = new System.Drawing.Point(556, 365);
+            this.lblTotalInformeVentas.Location = new System.Drawing.Point(558, 412);
             this.lblTotalInformeVentas.Name = "lblTotalInformeVentas";
             this.lblTotalInformeVentas.Size = new System.Drawing.Size(124, 24);
             this.lblTotalInformeVentas.TabIndex = 1;
@@ -173,7 +173,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 491);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(899, 519);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormInformes";

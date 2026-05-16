@@ -93,6 +93,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(29, 74);
+            this.txtUsuario.MaxLength = 32;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(220, 20);
             this.txtUsuario.TabIndex = 3;
@@ -160,12 +161,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(751, 436);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Usuarios";
             this.Load += new System.EventHandler(this.FormUsuarios_Load);
             this.groupBox1.ResumeLayout(false);

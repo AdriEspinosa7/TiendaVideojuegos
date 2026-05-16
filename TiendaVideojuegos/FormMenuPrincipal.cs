@@ -196,23 +196,32 @@ namespace TiendaVideojuegos
 
             try
             {
-                // Lo guardo en la carpeta mis documentos del ordenador y le pongo fecha al archivo
+                // Defino las rutas
                 string rutaMisDocumentos = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                string fechaFormateada = DateTime.Now.ToString("yyyy-MM-dd_HH-mm");
-                string archivoDestino = rutaMisDocumentos + "\\CopiaSeguridad_GameStore_" + fechaFormateada + ".sql";
+                string carpetaGameStore = rutaMisDocumentos + "\\Copias de seguridad GameStore";
 
-                // Abro conexión y lanzo el backup usando la librería instalada
+                // Compruebo si la carpeta NO existe y si no existe la creo
+                if (System.IO.Directory.Exists(carpetaGameStore) == false)
+                {
+                    System.IO.Directory.CreateDirectory(carpetaGameStore);
+                }
+
+                // Genero el nombre del archivo y lo junto con la nueva carpeta
+                string fechaFormateada = DateTime.Now.ToString("yyyy-MM-dd_HH-mm");
+                string archivoDestino = carpetaGameStore + "\\CopiaSeguridad_" + fechaFormateada + ".sql";
+
+                // Lanzo el backup usando la librería instalada
                 miConexion.Abrir();
                 using (MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand())
                 {
                     using (MySqlBackup mb = new MySqlBackup(cmd))
                     {
                         cmd.Connection = conexionActiva;
-                        mb.ExportToFile(archivoDestino); // Esta línea es la hace todo el backup
+                        mb.ExportToFile(archivoDestino); // Esta línea hace todo el backup
                     }
                 }
 
-                MessageBox.Show("Copia de seguridad guardada automáticamente en tus Documentos:\n" + archivoDestino, "Copia Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Copia de seguridad guardada automáticamente en:\n" + archivoDestino, "Copia Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Cierro la aplicación entera
                 Application.ExitThread();
@@ -226,6 +235,12 @@ namespace TiendaVideojuegos
             {
                 miConexion.Cerrar();
             }
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAcercaDe formAcercaDe = new FormAcercaDe();
+            formAcercaDe.ShowDialog();
         }
     }
 }

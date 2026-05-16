@@ -200,6 +200,15 @@ namespace TiendaVideojuegos
             txtTelefono.Text = "";
             txtContacto.Text = "";
         }
+
+        private void txtContacto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                // Si es un número lo anulo
+                e.Handled = true;
+            }
+        }
     }
 }
 

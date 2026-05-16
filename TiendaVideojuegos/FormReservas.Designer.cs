@@ -85,7 +85,7 @@
             // 
             // btnCrearReserva
             // 
-            this.btnCrearReserva.Location = new System.Drawing.Point(70, 331);
+            this.btnCrearReserva.Location = new System.Drawing.Point(70, 323);
             this.btnCrearReserva.Name = "btnCrearReserva";
             this.btnCrearReserva.Size = new System.Drawing.Size(136, 29);
             this.btnCrearReserva.TabIndex = 7;
@@ -158,9 +158,9 @@
             this.groupBox2.Controls.Add(this.btnCancelar);
             this.groupBox2.Controls.Add(this.btnCompletar);
             this.groupBox2.Controls.Add(this.dgvReservas);
-            this.groupBox2.Location = new System.Drawing.Point(373, 33);
+            this.groupBox2.Location = new System.Drawing.Point(365, 33);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(474, 252);
+            this.groupBox2.Size = new System.Drawing.Size(525, 252);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Reservas Activas";
@@ -194,14 +194,15 @@
             this.dgvReservas.ReadOnly = true;
             this.dgvReservas.RowHeadersVisible = false;
             this.dgvReservas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReservas.Size = new System.Drawing.Size(462, 191);
+            this.dgvReservas.Size = new System.Drawing.Size(513, 191);
             this.dgvReservas.TabIndex = 0;
             // 
             // FormReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 468);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(917, 452);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
