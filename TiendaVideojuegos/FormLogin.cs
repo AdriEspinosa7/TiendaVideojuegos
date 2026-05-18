@@ -55,7 +55,7 @@ namespace TiendaVideojuegos
                     string rolUsuario = resultado.ToString();
                     MessageBox.Show("¡Bienvenido al sistema! Tu rol es: " + rolUsuario, "Login Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Abro el menú principal y LE PASO EL ROL
+                    // Si encuentra el usuario en la BD, abro el menú y le paso el rol
                     FormMenuPrincipal menu = new FormMenuPrincipal(rolUsuario);
                     menu.Show();
 

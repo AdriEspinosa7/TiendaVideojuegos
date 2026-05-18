@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 using Microsoft.Reporting.WinForms;
+using MySql.Data.MySqlClient;
+using Mysqlx;
 
 namespace TiendaVideojuegos
 {
@@ -27,6 +28,8 @@ namespace TiendaVideojuegos
 
             // cargo el crítico nada más abrir
             CargarStockCritico();
+
+            // lo llamo al inicio para que el visor no aparezca en blanco con error
             this.reportViewerVentas.RefreshReport();
         }
 
@@ -61,7 +64,7 @@ namespace TiendaVideojuegos
                 adaptador.Fill(tablaVirtual);
 
 
-                // limpio cualquier dato viejo que tuviera el visor del informe
+                // Limpio cualquier dato viejo que tuviera el visor del informe
                 reportViewerVentas.LocalReport.DataSources.Clear();
 
                 // Creo un origen de datos para el informe
@@ -75,8 +78,8 @@ namespace TiendaVideojuegos
             }
             catch (Exception ex)
             {
-                // mensaje de error por si falla la conexión o el reporte
-                MessageBox.Show("Ha ocurrido un error al generar el informe en PDF. Detalle: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Mensaje de error por si falla la conexión o el reporte
+                MessageBox.Show("Error al generar el informe: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

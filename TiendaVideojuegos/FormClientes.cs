@@ -267,6 +267,7 @@ namespace TiendaVideojuegos
                 }
                 finally
                 {
+                    // me aseguro de cerrar la conexión siempre
                     miConexion.Cerrar();
                 }
             }

@@ -26,17 +26,11 @@ namespace TiendaVideojuegos
         {
             try
             {
-                // Compruebo que la conexión esté cerrada antes de abrirla
-                if (conexion.State == System.Data.ConnectionState.Closed)
-                {
-                    conexion.Open();
-                }
+                conexion.Open();
             }
             catch (Exception ex)
             {
-                // Si algo falla muestro un mensaje (como por ejemplo, si se me olvida encender XAMPP...) 
-                MessageBox.Show("Error al conectar con la base de datos: " + ex.Message,
-                                "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al conectar con la base de datos: " + ex.Message, "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
